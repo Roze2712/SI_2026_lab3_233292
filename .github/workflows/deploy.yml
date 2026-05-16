@@ -16,10 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
       - name: Lint HTML
-        uses: chabad360/html-validator-action@v1.0.3
-        with:
-          files: 'index.html'
+        run: htmlhint index.html
 
   deploy-pages:
     runs-on: ubuntu-latest
