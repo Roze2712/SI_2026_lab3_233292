@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint HTML
-        uses: html-validate/html-validate-action@v1
+        uses: chabad360/html-validator-action@v1.0.3
         with:
           files: 'index.html'
 
